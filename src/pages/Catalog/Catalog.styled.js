@@ -16,25 +16,25 @@ const Container = styled.ul`
   padding-left: 15px;
   padding-right: 15px;
   margin: 0 auto;
-  background-color: #f0f0f0; /* Додайте колір фону */
-  padding: 20px; /* Додайте відступи для контейнера */
-  border-radius: 8px; /* Додайте закруглення країв */
+  background-color: #f0f0f0; 
+  padding: 20px; 
+  border-radius: 8px; 
 `;
 
 const ContainerCar = styled.li`
   flex-basis: calc((100% - 29px) / 4);
   position: relative;
   margin-bottom: 50px;
-  background-color: #ffffff; /* Додайте колір фону для кожного авто */
-  border-radius: 8px; /* Додайте закруглення країв для кожного авто */
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Додайте тінь для кращого вигляду */
-  padding: 20px; /* Додайте відступи всередині кожного авто */
+  background-color: #ffffff; 
+  border-radius: 8px; 
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); 
+  padding: 20px; 
   margin-right: 15px;
   margin-left: 15px;
 `;
 
 const Icon = styled(AiOutlineHeart)`
-  fill: #ff5733; /* Змініть колір іконки */
+  fill: #ff5733; 
   width: 18px;
   height: 18px;
 `;
@@ -47,12 +47,12 @@ const BtnIcon = styled.button`
   justify-content: center;
   align-items: center;
   border: none;
-  background-color: #ffffff; /* Додайте колір фону кнопки */
-  border-radius: 50%; /* Змініть форму кнопки на коло */
-  width: 32px; /* Змініть розмір кнопки */
+  background-color: #ffffff; 
+  border-radius: 50%; 
+  width: 32px;
   height: 32px;
   cursor: pointer;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Додайте тінь для кращого вигляду */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); 
 `;
 
 const LearnMoreButton = styled.button`
