@@ -1,13 +1,13 @@
 import styled from '@emotion/styled';
 
 const HomeContainer = styled.div`
-  background-color: #333; /* Темний фон */
-  height: 100vh; /* Висота на весь екран */
+  background-color: #333; 
+  height: 100vh; 
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  color: #fff; /* Колір тексту */
+  color: #fff; 
   font-family: Arial, sans-serif;
 `;
 
