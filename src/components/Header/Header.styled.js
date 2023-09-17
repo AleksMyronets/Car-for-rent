@@ -2,16 +2,16 @@ import styled from '@emotion/styled';
 import { NavLink } from 'react-router-dom';
 
 const HeaderContainer = styled.header`
-  background-color: #f0f0f0; /* Світлий фон */
-  color: #fff; /* Колір тексту */
+  background-color: #f0f0f0; 
+  color: #fff; 
   padding: 10px 0;
 `;
 
 const NavList = styled.ul`
   list-style: none;
   display: flex;
-  justify-content: center; /* Вирівнювання по центру горизонталі */
-  align-items: center; /* Вирівнювання по центру вертикалі */
+  justify-content: center; 
+  align-items: center; 
   margin: 0;
   padding: 0;
 `;
@@ -27,11 +27,11 @@ const NavLinkStyled = styled(NavLink)`
   transition: color 0.3s;
 
   &:hover {
-    color: #0074cc; /* Колір при наведенні */
+    color: #0074cc; 
   }
 
   &.active {
-    font-weight: bold; /* Стиль для активного посилання */
+    font-weight: bold; 
   }
 `;
 
