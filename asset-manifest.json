@@ -1,10 +1,10 @@
 {
   "files": {
-    "main.js": "/car-for-rent/static/js/main.2de235d1.js",
+    "main.js": "/car-for-rent/static/js/main.25dadfe3.js",
     "index.html": "/car-for-rent/index.html",
-    "main.2de235d1.js.map": "/car-for-rent/static/js/main.2de235d1.js.map"
+    "main.25dadfe3.js.map": "/car-for-rent/static/js/main.25dadfe3.js.map"
   },
   "entrypoints": [
-    "static/js/main.2de235d1.js"
+    "static/js/main.25dadfe3.js"
   ]
 }
