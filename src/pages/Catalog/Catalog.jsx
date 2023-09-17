@@ -87,7 +87,7 @@
 
 // export default CatalogPage;
 
-import React from 'react';
+import React, {useState} from 'react';
 
 import {
   Img,
@@ -96,13 +96,45 @@ import {
   Icon,
   BtnIcon,
   LearnMoreButton,
+  PriceFilter,
 } from './Catalog.styled';
 
 const CatalogPage = ({ cars, onClick, onClickLoadeMore, addFavorit }) => {
+const [priceFilter, setPriceFilter] = useState({
+    minPrice: 0,
+    maxPrice: 100,
+  });
+
+  const handlePriceRangeChange = e => {
+    const { name, value } = e.target;
+    setPriceFilter({
+      ...priceFilter,
+      [name]: value,
+    });
+  };
+
 
   return (
     <>
       <Container>
+         <PriceFilter>
+          <label>Price Range:</label>
+          <input
+            type="number"
+            name="minPrice"
+            value={priceFilter.minPrice}
+            onChange={handlePriceRangeChange}
+            step={10}
+          />
+          <span>-</span>
+          <input
+            type="number"
+            name="maxPrice"
+            value={priceFilter.maxPrice}
+            onChange={handlePriceRangeChange}
+            step={10}
+          />
+        </PriceFilter>
         {cars.map(car => (
           <ContainerCar key={car.id}>
             <Img src={car.img} alt="car" />
