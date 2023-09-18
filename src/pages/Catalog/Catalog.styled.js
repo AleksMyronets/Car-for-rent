@@ -74,7 +74,7 @@ const LearnMoreButton = styled.button`
 `;
 
 const PriceFilter = styled.button`
-
+    position: relative;
 `;
 
 export { Img, Container, ContainerCar, Icon, BtnIcon, LearnMoreButton, PriceFilter };
