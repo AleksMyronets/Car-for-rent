@@ -27,25 +27,25 @@ const [priceFilter, setPriceFilter] = useState({
 
   return (
     <>
+      <PriceFilter>
+        <label>Price Range:</label>
+        <input
+          type="number"
+          name="minPrice"
+          value={priceFilter.minPrice}
+          onChange={handlePriceRangeChange}
+          step={10}
+        />
+        <span>-</span>
+        <input
+          type="number"
+          name="maxPrice"
+          value={priceFilter.maxPrice}
+          onChange={handlePriceRangeChange}
+          step={10}
+        />
+      </PriceFilter>
       <Container>
-         <PriceFilter>
-          <label>Price Range:</label>
-          <input
-            type="number"
-            name="minPrice"
-            value={priceFilter.minPrice}
-            onChange={handlePriceRangeChange}
-            step={10}
-          />
-          <span>-</span>
-          <input
-            type="number"
-            name="maxPrice"
-            value={priceFilter.maxPrice}
-            onChange={handlePriceRangeChange}
-            step={10}
-          />
-        </PriceFilter>
         {cars.map(car => (
           <ContainerCar key={car.id}>
             <Img src={car.img} alt="car" />
