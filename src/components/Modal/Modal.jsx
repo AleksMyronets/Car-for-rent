@@ -25,7 +25,22 @@ const Modal = ({ data, onClose }) => {
       <Overlay onClick={hendleBeckdropClick}>
         <ModalContainer>
           <img src={data.img} alt="" />
-          <h1>{data.model}</h1>
+          <ul>
+            <li>{data.make}</li>
+            <li>{data.model}</li>
+            <li>{data.year}</li>
+            <li>Price/1 hour: {data.rentalPrice}</li>
+            <li>Fuel Consumption: {data.fuelConsumption}</li>
+            <li>Engine Size: {data.engineSize}</li>
+          </ul>
+          <ul>
+            <li>{data.address}</li>
+            <li>{data.rentalCompany}</li>
+            <li>Type: {data.type}</li>
+            <li>Mileage: {data.mileage} km</li>
+            <li>ID: {data.id}</li>
+            <li>Accessories: {data.accessories.join(', ')}</li>
+          </ul>
         </ModalContainer>
       </Overlay>
     </>
@@ -33,3 +48,4 @@ const Modal = ({ data, onClose }) => {
 };
 
 export default Modal;
+
