@@ -163,4 +163,17 @@ const Form = styled.form`
   }
 `;
 
-export { Img, Container, ContainerCar, Icon, BtnIcon, LearnMoreButton, PriceFilter, BtnLearnMore, BtnLodeMore, Form, ContainerMain};
+const RemoveButton = styled.button`
+  background: none;
+  border: none;
+  font-size: 16px;
+  line-height: 1;
+  cursor: pointer;
+  color: red;
+  position: absolute;
+  top: 5px;
+  right: 5px;
+`;
+
+
+export { Img, Container, ContainerCar, Icon, BtnIcon, LearnMoreButton, PriceFilter, BtnLearnMore, BtnLodeMore, Form, ContainerMain, RemoveButton};
