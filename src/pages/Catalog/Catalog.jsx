@@ -55,8 +55,9 @@ const CatalogPage = ({
 
   useEffect(() => {
     handleSearch();
-  }, [brandFilter, priceFilter, fromMileage, toMileage]);
+  });
 
+  
   return (
     <>
       <ContainerMain>
