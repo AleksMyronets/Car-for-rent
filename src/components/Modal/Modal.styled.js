@@ -31,8 +31,8 @@ const ModalContainer = styled.div`
 const CarInfo = styled.div`
   ul {
     list-style: none;
-    padding: 0;
-    margin: 0;
+    padding: ;
+    margin-top: 10px;
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
