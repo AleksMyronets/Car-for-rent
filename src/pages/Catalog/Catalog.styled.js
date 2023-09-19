@@ -16,7 +16,7 @@ const Container = styled.ul`
   padding-left: 15px;
   padding-right: 15px;
   margin: 0 auto;
-  background-color: #f0f0f0; 
+  // background-color: #f0f0f0; 
   padding: 20px; 
   border-radius: 8px; 
 `;
@@ -103,18 +103,20 @@ const BtnLearnMore = styled.button`
 `;
 
 const BtnLodeMore = styled.button`
-  color: #3470ff;
-  font-family: Manrope;
-  font-size: 16px;
-  font-style: normal;
-  font-weight: 500;
-  background: inherit;
+  background-color: #0074cc;
+  color: #fff;
   border: none;
-  margin-bottom: 150px;
-  margin-top: 50px;
-  margin-left: auto;
-  margin-right: auto;
+  border-radius: 5px;
+  padding: 10px 15px;
+  font-size: 16px;
   cursor: pointer;
+  transition: background-color 0.5s;
+  margin: 20px auto;
+  display: block;
+  &:hover {
+    background-color: #0058a3;
+  }
+
 `;
 
 export { Img, Container, ContainerCar, Icon, BtnIcon, LearnMoreButton, PriceFilter, BtnLearnMore, BtnLodeMore};
