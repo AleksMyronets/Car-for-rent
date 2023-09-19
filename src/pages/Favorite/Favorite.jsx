@@ -4,7 +4,6 @@ import {
   Img,
   Container,
   ContainerCar,
-  ContainerMain,
   RemoveButton,
 } from '../Catalog/Catalog.styled';
 
@@ -18,7 +17,6 @@ const Favorite = ({ favorite }) => {
 
   return (
     <>
-      <ContainerMain>
         <Container>
           {favoriteList.map(car => (
             <ContainerCar key={car.id}>
@@ -43,7 +41,6 @@ const Favorite = ({ favorite }) => {
             </ContainerCar>
           ))}
         </Container>
-      </ContainerMain>
     </>
   );
 };
