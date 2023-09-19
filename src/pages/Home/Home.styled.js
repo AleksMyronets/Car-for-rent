@@ -1,7 +1,7 @@
 import styled from '@emotion/styled';
 
 const HomeContainer = styled.div`
-  background: radial-gradient(circle, red, yellow, green, blue);
+  background: linear-gradient(to bottom, #0000ff 0%, #ffff00 100%);
   height: 100vh; 
   display: flex;
   flex-direction: column;
