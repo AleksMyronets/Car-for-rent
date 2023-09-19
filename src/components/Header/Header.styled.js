@@ -2,7 +2,7 @@ import styled from '@emotion/styled';
 import { NavLink } from 'react-router-dom';
 
 const HeaderContainer = styled.header`
-  background-color: #f0f0f0; 
+  background-color: #86b300;
   color: #fff; 
   padding: 10px 0;
 `;
