@@ -81,4 +81,40 @@ const PriceFilter = styled.button`
   margin: 20px 0; /* Додайте відступи за потребою */
 `;
 
-export { Img, Container, ContainerCar, Icon, BtnIcon, LearnMoreButton, PriceFilter};
+const BtnLearnMore = styled.button`
+  border-radius: 12px;
+  background: #3470ff;
+  display: flex;
+  width: 274px;
+  height: 44px;
+  padding: 12px 99px;
+  justify-content: center;
+  align-items: center;
+  flex-shrink: 0;
+  border: none;
+  color: #fff;
+  font-family: Manrope;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 600;
+  position: absolute;
+  bottom: 0;
+  cursor: pointer;
+`;
+
+const BtnLodeMore = styled.button`
+  color: #3470ff;
+  font-family: Manrope;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 500;
+  background: inherit;
+  border: none;
+  margin-bottom: 150px;
+  margin-top: 50px;
+  margin-left: auto;
+  margin-right: auto;
+  cursor: pointer;
+`;
+
+export { Img, Container, ContainerCar, Icon, BtnIcon, LearnMoreButton, PriceFilter, BtnLearnMore, BtnLodeMore};
