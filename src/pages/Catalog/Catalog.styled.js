@@ -40,7 +40,7 @@ const ContainerCar = styled.li`
 `;
 
 const Icon = styled(AiOutlineHeart)`
-  fill: #ff5733; 
+  fill: #ff5733;
   width: 18px;
   height: 18px;
 `;
@@ -53,13 +53,13 @@ const BtnIcon = styled.button`
   justify-content: center;
   align-items: center;
   border: none;
-  background-color: #fffff00;
+  background-color: transparent; 
   opacity: 1;
-  border-radius: 50%; 
+  border-radius: 50%;
   width: 32px;
   height: 32px;
   cursor: pointer;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); 
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 `;
 
 const LearnMoreButton = styled.button`
