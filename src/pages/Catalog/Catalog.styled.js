@@ -1,6 +1,11 @@
 import styled from '@emotion/styled';
 import { AiOutlineHeart } from 'react-icons/ai';
 
+const ContainerMain = styled.ul`
+  background: radial-gradient(circle, red, yellow, green, blue);
+  padding-top: 20px;
+`;
+
 const Img = styled.img`
   height: 268px;
   border-radius: 14px;
@@ -16,7 +21,6 @@ const Container = styled.ul`
   padding-left: 15px;
   padding-right: 15px;
   margin: 0 auto;
-  // background-color: #f0f0f0; 
   padding: 20px; 
   border-radius: 8px; 
 `;
@@ -119,4 +123,44 @@ const BtnLodeMore = styled.button`
 
 `;
 
-export { Img, Container, ContainerCar, Icon, BtnIcon, LearnMoreButton, PriceFilter, BtnLearnMore, BtnLodeMore};
+const Form = styled.form`
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  max-width: 400px;
+  margin: 0 auto;
+  padding: 20px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  background-color: #f7f7f7;
+
+  label {
+    font-weight: bold;
+    margin-bottom: 5px;
+  }
+
+  select,
+  input[type="number"] {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+  }
+
+  button {
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    padding: 10px 20px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+
+    &:hover {
+      background-color: #0056b3;
+    }
+  }
+`;
+
+export { Img, Container, ContainerCar, Icon, BtnIcon, LearnMoreButton, PriceFilter, BtnLearnMore, BtnLodeMore, Form, ContainerMain};
