@@ -1,5 +1,5 @@
-import React, {useState} from 'react';
-
+import React, { useState, useEffect } from 'react';
+import axios from 'axios'; // Для HTTP-запитів
 import {
   Img,
   Container,
@@ -7,47 +7,104 @@ import {
   Icon,
   BtnIcon,
   LearnMoreButton,
-  PriceFilter,
-  BtnLodeMore, 
+  BtnLodeMore,
 } from './Catalog.styled';
 
-const CatalogPage = ({ cars, onClick, onClickLoadeMore, addFavorit, onLoadeMore }) => {
-const [priceFilter, setPriceFilter] = useState({
-    minPrice: 0,
-    maxPrice: 100,
-  });
+const CatalogPage = ({
+  cars,
+  onClick,
+  onClickLoadeMore,
+  addFavorit,
+  onLoadeMore,
+}) => {
+  const [brandFilter, setBrandFilter] = useState('');
+  const [priceFilter, setPriceFilter] = useState('');
+  const [fromMileage, setFromMileage] = useState('');
+  const [toMileage, setToMileage] = useState('');
 
-  const handlePriceRangeChange = e => {
-    const { name, value } = e.target;
-    setPriceFilter({
-      ...priceFilter,
-      [name]: value,
-    });
+  const [filteredCars, setFilteredCars] = useState([]);
+
+  const handleSearch = async () => {
+    try {
+      const response = await axios.get(
+        'https://6492c7dd428c3d2035d0ab50.mockapi.io/adverts',
+        {
+          params: {
+            brand: brandFilter,
+            price: priceFilter,
+            fromMileage: fromMileage,
+            toMileage: toMileage,
+          },
+        }
+      );
+
+      setFilteredCars(response.data);
+    } catch (error) {
+      console.error(error);
+    }
   };
 
+  useEffect(() => {
+    handleSearch(); 
+  }, []); 
 
   return (
     <>
-      <PriceFilter>
-        <label>Price Range:</label>
+      <form>
+        <label>Car brand</label>
+        <select
+          value={brandFilter}
+          onChange={e => setBrandFilter(e.target.value)}
+        >
+          <option value="">All</option>
+          <option value="Buick">Buick</option>
+          <option value="Volvo">Volvo</option>
+          <option value="HUMMER">HUMMER</option>
+          <option value="Subaru">Subaru</option>
+          <option value="Mitsubishi">Mitsubishi</option>
+          <option value="Nissan">Nissan</option>
+          <option value="Lincoln">Lincoln</option>
+          <option value="GMC">GMC</option>
+          <option value="Hyundai">Hyundai</option>
+          <option value="MINI">MINI</option>
+          <option value="Bentley">Bentley</option>
+          <option value="Mercedes-Benz">Mercedes-Benz</option>
+          <option value="Aston Martin">Aston Martin</option>
+          <option value="Pontiac">Pontiac</option>
+          <option value="Lamborghini">Lamborghini</option>
+          <option value="Audi">Audi</option>
+          <option value="BMW">BMW</option>
+          <option value="Chevrolet">Chevrolet</option>
+          <option value="Chrysler">Chrysler</option>
+          <option value="Kia">Kia</option>
+          <option value="Land">Land</option>
+        </select>
+        <label>Price/1 hour</label>
         <input
           type="number"
-          name="minPrice"
-          value={priceFilter.minPrice}
-          onChange={handlePriceRangeChange}
+          value={priceFilter}
+          onChange={e => setPriceFilter(e.target.value)}
           step={10}
         />
-        <span>-</span>
+        <label>Car mileage / km (From)</label>
         <input
           type="number"
-          name="maxPrice"
-          value={priceFilter.maxPrice}
-          onChange={handlePriceRangeChange}
-          step={10}
+          value={fromMileage}
+          onChange={e => setFromMileage(e.target.value)}
         />
-      </PriceFilter>
+        <label>To</label>
+        <input
+          type="number"
+          value={toMileage}
+          onChange={e => setToMileage(e.target.value)}
+        />
+        <button type="button" onClick={handleSearch}>
+          Search
+        </button>
+      </form>
+
       <Container>
-        {cars.map(car => (
+        {filteredCars.map(car => (
           <ContainerCar key={car.id}>
             <Img src={car.img} alt="car" />
             <BtnIcon onClick={() => addFavorit(car)}>
@@ -81,3 +138,4 @@ const [priceFilter, setPriceFilter] = useState({
 };
 
 export default CatalogPage;
+
