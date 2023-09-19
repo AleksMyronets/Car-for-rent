@@ -8,9 +8,10 @@ import {
   BtnIcon,
   LearnMoreButton,
   PriceFilter,
+  BtnLodeMore, 
 } from './Catalog.styled';
 
-const CatalogPage = ({ cars, onClick, onClickLoadeMore, addFavorit }) => {
+const CatalogPage = ({ cars, onClick, onClickLoadeMore, addFavorit, onLoadeMore }) => {
 const [priceFilter, setPriceFilter] = useState({
     minPrice: 0,
     maxPrice: 100,
@@ -67,14 +68,14 @@ const [priceFilter, setPriceFilter] = useState({
               <li>{car.accessories[1]}</li>
             </ul>
             <LearnMoreButton onClick={() => onClick(car)}>
-             Learn more
+              Learn more
             </LearnMoreButton>
           </ContainerCar>
         ))}
-        {cars.length >= 8 && (
-          <button onClick={() => onClickLoadeMore()}>Load more</button>
-        )}
       </Container>
+      {cars.length >= 8 && cars.length < 25 && (
+        <BtnLodeMore onClick={onLoadeMore}>Load more</BtnLodeMore>
+      )}
     </>
   );
 };
