@@ -139,9 +139,9 @@ const CatalogPage = ({
           {filteredCars.slice(0, loadedCarsCount).map(car => (
             <ContainerCar key={car.id}>
               <Img src={car.img} alt="car" />
-              {/* <BtnIcon onClick={() => addFavorit(car)}>
+              <BtnIcon onClick={() => addFavorit(car)}>
                 <Icon id={car.id} />
-              </BtnIcon> */}
+              </BtnIcon>
               <FavoriteButton car={car} addFavorit={addFavorit} />
               <ul>
                 <li>{car.make}</li>
