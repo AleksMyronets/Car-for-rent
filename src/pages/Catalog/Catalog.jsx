@@ -66,8 +66,8 @@ const [priceFilter, setPriceFilter] = useState({
               <li>{car.id}</li>
               <li>{car.accessories[1]}</li>
             </ul>
-            <LearnMoreButton>
-              <button onClick={() => onClick(car)}>Learn more</button>
+            <LearnMoreButton onClick={() => onClick(car)}>
+             Learn more
             </LearnMoreButton>
           </ContainerCar>
         ))}
