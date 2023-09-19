@@ -4,6 +4,7 @@ import { AiOutlineHeart } from 'react-icons/ai';
 const ContainerMain = styled.ul`
   background: radial-gradient(circle, red, yellow, green, blue);
   padding-top: 20px;
+  padding-bottom: 50px;
 `;
 
 const Img = styled.img`
@@ -27,6 +28,7 @@ const Container = styled.ul`
 
 const ContainerCar = styled.li`
   flex-basis: calc((100% - 29px) / 4);
+  height: 100%;
   position: relative;
   margin-bottom: 50px;
   background-color: #ffffff; 
@@ -175,5 +177,11 @@ const RemoveButton = styled.button`
   right: 5px;
 `;
 
+const Description = styled.button`
+  background: none;
+  border: none;
+  height: 225px;
+`;
 
-export { Img, Container, ContainerCar, Icon, BtnIcon, LearnMoreButton, PriceFilter, BtnLearnMore, BtnLodeMore, Form, ContainerMain, RemoveButton};
+
+export { Img, Container, ContainerCar, Icon, BtnIcon, LearnMoreButton, PriceFilter, BtnLearnMore, BtnLodeMore, Form, ContainerMain, RemoveButton, Description};
