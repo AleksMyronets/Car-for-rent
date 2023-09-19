@@ -53,7 +53,8 @@ const BtnIcon = styled.button`
   justify-content: center;
   align-items: center;
   border: none;
-  background-color: #ffffff; 
+  background-color: #fffff00;
+  opacity: 1;
   border-radius: 50%; 
   width: 32px;
   height: 32px;
@@ -182,6 +183,8 @@ const Description = styled.button`
   border: none;
   height: 225px;
 `;
+
+
 
 
 export { Img, Container, ContainerCar, Icon, BtnIcon, LearnMoreButton, PriceFilter, BtnLearnMore, BtnLodeMore, Form, ContainerMain, RemoveButton, Description};
