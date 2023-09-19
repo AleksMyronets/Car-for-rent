@@ -56,6 +56,7 @@ const BtnIcon = styled.button`
 `;
 
 const LearnMoreButton = styled.button`
+  width: 100%;
   background-color: #0074cc;
   color: #fff;
   border: none;
@@ -67,14 +68,17 @@ const LearnMoreButton = styled.button`
   display: flex;
   justify-content: center;
   align-items: center;
-
+  
   &:hover {
     background-color: #0058a3;
   }
 `;
 
 const PriceFilter = styled.button`
-    position: relative;
+  display: flex;
+  justify-content: center; /* Горизонтальне центрування */
+  align-items: center; /* Вертикальне центрування */
+  margin: 20px 0; /* Додайте відступи за потребою */
 `;
 
-export { Img, Container, ContainerCar, Icon, BtnIcon, LearnMoreButton, PriceFilter };
+export { Img, Container, ContainerCar, Icon, BtnIcon, LearnMoreButton, PriceFilter};
