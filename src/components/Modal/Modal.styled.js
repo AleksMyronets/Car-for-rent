@@ -45,8 +45,11 @@ const CarInfo = styled.div`
   }
 `;
 
+const BtnRental = styled.a``;
+
 export {
     Overlay,
     ModalContainer,
-    CarInfo
+    CarInfo, 
+    BtnRental
 };
