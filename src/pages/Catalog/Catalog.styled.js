@@ -2,7 +2,7 @@ import styled from '@emotion/styled';
 import { AiOutlineHeart } from 'react-icons/ai';
 
 const ContainerMain = styled.ul`
-  background: radial-gradient(circle, red, yellow, green, blue);
+  background: linear-gradient(to bottom, #0000ff 0%, #ffff00 100%);
   padding-top: 20px;
   padding-bottom: 50px;
 `;
@@ -82,9 +82,9 @@ const LearnMoreButton = styled.button`
 
 const PriceFilter = styled.button`
   display: flex;
-  justify-content: center; /* Горизонтальне центрування */
-  align-items: center; /* Вертикальне центрування */
-  margin: 20px 0; /* Додайте відступи за потребою */
+  justify-content: center; 
+  align-items: center;
+  margin: 20px 0;
 `;
 
 const BtnLearnMore = styled.button`
