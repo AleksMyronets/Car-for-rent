@@ -127,8 +127,9 @@ const BtnLodeMore = styled.button`
 
 const Form = styled.form`
   display: flex;
-  flex-direction: column;
   align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
   max-width: 400px;
   margin: 0 auto;
   padding: 20px;
@@ -137,7 +138,6 @@ const Form = styled.form`
   background-color: #f7f7f7;
 
   label {
-    font-weight: bold;
     margin-bottom: 5px;
   }
 
