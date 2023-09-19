@@ -1,17 +1,30 @@
+import React, { useState } from 'react';
+
 import {
   Img,
   Container,
   ContainerCar,
   ContainerMain,
+  RemoveButton,
 } from '../Catalog/Catalog.styled';
 
 const Favorite = ({ favorite }) => {
+  const [favoriteList, setFavoriteList] = useState(favorite);
+
+  const handleRemoveFavorite = carId => {
+    const updatedFavoriteList = favoriteList.filter(car => car.id !== carId);
+    setFavoriteList(updatedFavoriteList);
+  };
+
   return (
     <>
       <ContainerMain>
         <Container>
-          {favorite.map(car => (
+          {favoriteList.map(car => (
             <ContainerCar key={car.id}>
+              <RemoveButton onClick={() => handleRemoveFavorite(car.id)}>
+                ✖
+              </RemoveButton>
               <Img src={car.img} alt="car" />
               <ul>
                 <li>{car.make}</li>
