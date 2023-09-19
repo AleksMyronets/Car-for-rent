@@ -1,7 +1,8 @@
 import { useEffect } from 'react';
-import { Overlay, ModalContainer } from './Modal.styled';
+import { Overlay, ModalContainer, BtnRental } from './Modal.styled';
 
 const Modal = ({ data, onClose }) => {
+  const contactNumber = '+380730000000';
   useEffect(() => {
     const hendleKeyDown = event => {
       if (event.code === 'Escape') {
@@ -41,6 +42,7 @@ const Modal = ({ data, onClose }) => {
             <li>ID: {data.id}</li>
             <li>Accessories: {data.accessories.join(', ')}</li>
           </ul>
+          <BtnRental href={`tel:${contactNumber}`}>Rental Car</BtnRental>
         </ModalContainer>
       </Overlay>
     </>
