@@ -12,6 +12,22 @@ import {
   ContainerMain,
 } from './Catalog.styled';
 
+// Ось новий компонент для кнопки з іконкою
+const FavoriteButton = ({ car, addFavorit }) => {
+  const [isIconBlue, setIsIconBlue] = useState(false); // Стан для кольору іконки
+
+  const toggleIconColor = () => {
+    setIsIconBlue(!isIconBlue); // Змінюємо стан для кольору іконки
+    addFavorit(car); // Викликаємо функцію для додавання в обране
+  };
+
+  return (
+    <BtnIcon onClick={toggleIconColor}>
+      <Icon id={car.id} style={{ color: isIconBlue ? 'blue' : 'initial' }} />
+    </BtnIcon>
+  );
+};
+
 const CatalogPage = ({
   cars,
   onClick,
@@ -43,7 +59,13 @@ const CatalogPage = ({
         }
       );
 
-      setFilteredCars(response.data);
+      if (response.data && typeof response.data === 'object') {
+        
+        setFilteredCars(response.data);
+      } else {
+        
+        console.error('Response is not valid JSON:', response.data);
+      }
     } catch (error) {
       console.error(error);
     }
@@ -57,7 +79,6 @@ const CatalogPage = ({
     handleSearch();
   });
 
-  
   return (
     <>
       <ContainerMain>
@@ -118,9 +139,10 @@ const CatalogPage = ({
           {filteredCars.slice(0, loadedCarsCount).map(car => (
             <ContainerCar key={car.id}>
               <Img src={car.img} alt="car" />
-              <BtnIcon onClick={() => addFavorit(car)}>
+              {/* <BtnIcon onClick={() => addFavorit(car)}>
                 <Icon id={car.id} />
-              </BtnIcon>
+              </BtnIcon> */}
+              <FavoriteButton car={car} addFavorit={addFavorit} />
               <ul>
                 <li>{car.make}</li>
                 <li>{car.model}</li>
