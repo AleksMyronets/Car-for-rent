@@ -108,7 +108,7 @@ const BtnLearnMore = styled.button`
   cursor: pointer;
 `;
 
-const BtnLodeMore = styled.button`
+const BtnLoadMore = styled.button`
   background-color: #0074cc;
   color: #fff;
   border: none;
@@ -190,4 +190,4 @@ const Description = styled.button`
 
 
 
-export { Img, Container, ContainerCar, Icon, BtnIcon, LearnMoreButton, PriceFilter, BtnLearnMore, BtnLodeMore, Form, ContainerMain, RemoveButton, Description};
+export { Img, Container, ContainerCar, Icon, BtnIcon, LearnMoreButton, PriceFilter, BtnLearnMore, BtnLoadMore, Form, ContainerMain, RemoveButton, Description};
