@@ -10,17 +10,17 @@ const Header = () => {
     <HeaderContainer>
       <NavList>
         <NavItem>
-          <NavLinkStyled to="/" activeClassName="active">
+          <NavLinkStyled to="/" className="active">
             Home
           </NavLinkStyled>
         </NavItem>
         <NavItem>
-          <NavLinkStyled to="/catalog" activeClassName="active">
+          <NavLinkStyled to="/catalog" className="active">
             Catalog
           </NavLinkStyled>
         </NavItem>
         <NavItem>
-          <NavLinkStyled to="/favorites" activeClassName="active">
+          <NavLinkStyled to="/favorites" className="active">
             Favorites
           </NavLinkStyled>
         </NavItem>
@@ -30,3 +30,4 @@ const Header = () => {
 };
 
 export default Header;
+
