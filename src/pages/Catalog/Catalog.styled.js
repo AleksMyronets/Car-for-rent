@@ -175,6 +175,10 @@ const RemoveButton = styled.button`
   position: absolute;
   top: 5px;
   right: 5px;
+
+  &:focus {
+    box-shadow: 0 0 5px rgba(255, 0, 0, 0.5);
+  }
 `;
 
 const Description = styled.button`
